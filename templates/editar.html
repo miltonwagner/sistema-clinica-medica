@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Editar Paciente</h2>
+
+<form method="POST">
+    <input name="nome" value="{{paciente.nome}}" class="form-control mb-2">
+    <input name="idade" value="{{paciente.idade}}" class="form-control mb-2">
+    <input name="telefone" value="{{paciente.telefone}}" class="form-control mb-2">
+    <input name="email" value="{{ paciente.email }}" class="form-control mb-2">
+
+    <button class="btn btn-success">Atualizar</button>
+</form>
+
+<a href="/pacientes" class="btn btn-secondary mt-2">Voltar</a>
+
+{% endblock %}

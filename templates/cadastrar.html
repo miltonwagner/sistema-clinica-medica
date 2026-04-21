@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Cadastrar Paciente</h2>
+
+<form method="POST">
+    <input name="nome" placeholder="Nome" class="form-control mb-2">
+    <input name="idade" placeholder="Idade" class="form-control mb-2">
+    <input name="telefone" placeholder="Telefone" class="form-control mb-2">
+    <input name="email" placeholder="Email" class="form-control mb-2" required>
+
+    <button class="btn btn-success">Salvar</button>
+</form>
+
+<a href="/pacientes" class="btn btn-secondary mt-2">Voltar</a>
+
+{% endblock %}

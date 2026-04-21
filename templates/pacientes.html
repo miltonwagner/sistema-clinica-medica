@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h2>Cadastro de Pacientes</h2>
+
+    <!-- FORMULÁRIO -->
+    <form method="POST" class="mb-4">
+
+        <input name="nome" class="form-control mb-2" placeholder="Nome" required>
+        <input name="idade" class="form-control mb-2" placeholder="Idade">
+        <input name="telefone" class="form-control mb-2" placeholder="Telefone">
+        <input name="email" class="form-control mb-2" placeholder="Email">
+
+        <button class="btn btn-success">
+            Cadastrar Paciente
+        </button>
+
+    </form>
+
+    <!-- LISTAGEM -->
+    <h3>Lista de Pacientes</h3>
+
+    <table class="table table-striped table-hover">
+
+        <thead class="table-dark">
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% for p in pacientes %}
+
+            <tr>
+                <td>{{ p.nome }}</td>
+                <td>{{ p.idade }}</td>
+                <td>{{ p.telefone }}</td>
+                <td>{{ p.email }}</td>
+
+                <td>
+                    <a href="/excluir/{{p.id}}"
+                       class="btn btn-danger btn-sm"
+                       onclick="return confirm('Deseja excluir este paciente?')">
+                        Excluir
+                    </a>
+                </td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}
