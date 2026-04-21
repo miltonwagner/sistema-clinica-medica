@@ -6,9 +6,6 @@
 ## 🔐 Tela de Login
 ![Login](static/img/login.png)
 
-## 📧 Confirmação de Email
-![Email](static/img/email.png)
-
 ## 📋 Menu Principal
 ![Menu](static/img/menu.png)
 
@@ -21,7 +18,7 @@
 ## 👤 Cadastro de Pacientes
 ![Pacientes](static/img/pacientes.png)
 
-## 👤 Envio de Email
+## 📧 Confirmação de Email
 ![Email](static/img/email.png)
 
 
